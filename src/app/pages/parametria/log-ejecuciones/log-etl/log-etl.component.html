@@ -1,0 +1,42 @@
+<nav class="navLocation" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Parametría</li>
+    <li class="breadcrumb-item">Log Ejecución</li>
+    <li class="breadcrumb-item active" aria-current="page">Log Ejecucion de ETL</li>
+  </ol>
+</nav>
+<section style="overflow-x: hidden;">
+  <div class="row">
+    <div class="col">
+      <span class="texto-santander" style="top:10px; position: relative;"><strong>LOG EJECUCIÓN ETL</strong></span>
+      <table class="tabla-santander">
+        <thead>
+        <tr>
+          <th class="text-center">Fecha Ejecución</th>
+          <th class="text-center">Resultado</th>
+          <th class="text-center">Descripción</th>
+          <th class="text-center">Regístros Ingresados</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tbl of logETL">
+          <td class="text1" id="valuee">{{tbl.fecha}}</td>
+          <td class="text2">{{tbl.resultado}}</td>
+          <td class="text3">{{tbl.descripcion}}</td>
+          <td class="text4">{{tbl.numRegistros}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<div class="spacer"></div>
+<section>
+  <div class="text-right">
+    <!-- revisar  CLASES CSS no fuciona-->
+    <button class="btn btn-primary-back" [routerLink]="['/log']"><a class="backbutton"><b>&lt; Volver</b></a>
+    </button>
+  </div>
+</section>

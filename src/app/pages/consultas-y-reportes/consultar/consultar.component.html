@@ -1,0 +1,708 @@
+<nav class="navLocation" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Consultas y reportes</li>
+    <li class="breadcrumb-item active" aria-current="page">Consultar</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <header>
+    Filtros de busqueda
+  </header>
+  <div class="spacer"></div>
+  <section>
+    <form [formGroup]="searchForm" (ngSubmit)="buscar()">
+      <div class="row">
+        <div class="col">
+          <label for="periodo">Fecha</label>
+        </div>
+        <div class="col">
+          <select formControlName="periodo" id="periodo" class="form-control">
+            <option *ngFor="let item of periodos" [value]="item.periodo">
+              {{item.descripcion}}
+            </option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="modalidad">Informacion a Consultar</label>
+        </div>
+        <div class="col">
+          <select formControlName="modalidad" id="modalidad" class="form-control">
+            <option value="1">Clientes</option>
+            <option value="2">Prestamos</option>
+            <option value="3">Garantias</option>
+            <option value="4">Bienes</option>
+            <option value="5">Pasivos</option>
+          </select>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-primary btn-block"
+                      disabled="{{buscado?'disabled':''}}">Consultar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <div class="spacer"></div>
+  <section>
+    <table class="table tabla-santander">
+      <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <thead class="min-width center">
+      <tr>
+        <th>Contrato</th>
+        <th>Tipo de Doc.</th>
+        <th>No. Doc. Con Digito de Chequeo</th>
+        <th class="min-width-400">Nombre Completo Cliente</th>
+        <th>Origen Información (ALT/BKT/BOT)</th>
+        <th>Banpri</th>
+        <th>Usuario Ultima Modificación</th>
+        <th>Timestamp Ultima Modificación</th>
+        <th>Periodo</th>
+        <th>Fecha de Corte</th>
+        <th>Situación del préstamo</th>
+        <th>Aplicativo operación</th>
+        <th>Producto Operación</th>
+        <th>Subproducto Operación</th>
+        <th>Modalidad</th>
+        <th>Código Segmento</th>
+        <th>Desc. Segmento</th>
+        <th>Tipo persona</th>
+        <th>Tamaño Empresa</th>
+        <th>Actividad Económica</th>
+        <th>Descripción CIIU</th>
+        <th>Fecha activos</th>
+        <th>Valor activos</th>
+        <th>Tasa EA</th>
+        <th>Ind. Susp. Interés</th>
+        <th>Fecha de suspensión</th>
+        <th>Marca Reestructurado</th>
+        <th>Alerta Mora Reestructurado</th>
+        <th>Cod. Divisa</th>
+        <th>Número de Garantía</th>
+        <th>Fecha Alta Garantía</th>
+        <th class="min-width-400">Desc. Garantía</th>
+        <th>Garantía Histórica</th>
+        <th>Garantías Históricas Mod. de Referencia</th>
+        <th>Ind. Garantía Idónea</th>
+        <th>Valor Garantía</th>
+        <th>Ind. Saldo Garantía</th>
+        <th>Porc. Cobertura Garantía</th>
+        <th>Tipo Garantía</th>
+        <th>Clase Garantía</th>
+        <th>Fecha Avaluó</th>
+        <th>Tipología Riesgos</th>
+        <th>Desc. Tipología Riesgo</th>
+        <th>Fecha de inicio Producto</th>
+        <th>Fecha vencimiento Producto</th>
+        <th>Días Mora</th>
+        <th>Días Mora Después de Incum.</th>
+        <th>Fecha de Incumplimiento</th>
+        <th>Saldo Capital ML</th>
+        <th>Saldo Intereses ML</th>
+        <th>Saldo Otros Conceptos ML</th>
+        <th>Saldo Capital ME</th>
+        <th>Saldo Intereses ME</th>
+        <th>Saldo Otros Conceptos ME</th>
+        <th>Total Saldo Capital</th>
+        <th>Total Saldo Intereses</th>
+        <th>Total Saldo Otros Conceptos</th>
+        <th>Exposición de Cartera</th>
+        <th>PI – Matriz A</th>
+        <th>PI – Matriz B</th>
+        <th>PDI</th>
+        <th>PDI Descubierta</th>
+        <th>Componente CIP Capital</th>
+        <th>Componente CIP Interés</th>
+        <th>Componente CIP Otros Conceptos</th>
+        <th>Componente CIP Capital Desc.</th>
+        <th>Componente CIP Interés Desc.</th>
+        <th>Componente CIP Otros Conceptos Desc.</th>
+        <th>Total CIP Capital</th>
+        <th>Total CIP Interés</th>
+        <th>Total CIP Otros Conceptos</th>
+        <th>Pe. Esp. Matriz B Capital</th>
+        <th>Pe. Esp. Matriz B Intereses</th>
+        <th>Pe. Esp. Matriz B Otros conceptos</th>
+        <th>Pe. Esp. Matriz B Capital Desc.</th>
+        <th>Pe. Esp. Matriz B Intereses Desc.</th>
+        <th>Pe. Esp. Matriz B Otros Conceptos Desc.</th>
+        <th>Diferencial Matrices Capital</th>
+        <th>Diferencial Matrices Intereses</th>
+        <th>Diferencia Matrices Otros Conceptos</th>
+        <th>Ratio CIC Capital</th>
+        <th>Ratio CIC Interés</th>
+        <th>Ratio CIC Otros Conceptos</th>
+        <th>Componente CIC Capital</th>
+        <th>Componente CIC Interés</th>
+        <th>Componente CIC Otros Conceptos</th>
+        <th>Total CIC Capital</th>
+        <th>Total CIC Interés</th>
+        <th>Total CIC Otros Conceptos</th>
+        <th>Provisión Adicional Capital</th>
+        <th>Provisión Adicional Interés</th>
+        <th>Provisión Adicional Otros Conceptos</th>
+        <th>Factor Ajuste x Plazo</th>
+        <th>Provisión Total Capital</th>
+        <th>Provisión Total Interés</th>
+        <th>Provisión Total Otros Conceptos</th>
+        <th>Provisión Total</th>
+        <th>Porcentaje Provisión Capital</th>
+        <th>Porcentaje Provisión Interés</th>
+        <th>Porcentaje Provisión Otros Conceptos</th>
+        <th>Porcentaje Provisión Total</th>
+        <th>Categoría Cuantitativa</th>
+        <th>Categoría Individual o Modelo</th>
+        <th>Categoría Forzada o Subjetiva</th>
+        <th>Categoría Alineada</th>
+        <th>Calificación Cartera</th>
+        <th>Valor T</th>
+        <th>Exposición de Cartera (T-1 Capital)</th>
+        <th>Exposición de Cartera (T-1 Interés)</th>
+        <th>Exposición de Cartera (T-1 Otros Conceptos)</th>
+        <th>Exposición de Cartera Total (T-1 )</th>
+        <th>CIC (T – 1 Capital)</th>
+        <th>CIC (T – 1 Interés)</th>
+        <th>CIC (T-1 Otros Conceptos)</th>
+        <th>CIC TOTAL (T-1)</th>
+        <th>AMB 31-60</th>
+        <th>AMC_6190</th>
+        <th>MMB_3160</th>
+        <th>MMC_6190</th>
+        <th>MMD_90</th>
+        <th>CRB Créditos Activos</th>
+        <th>CAR Comportamiento Anual Regular</th>
+        <th>CAM Comportamiento Anual Malo</th>
+        <th>PR Indicador Prepago</th>
+        <th>Indicador Garantía Prenda</th>
+        <th>Indicador Garantía Hipoteca</th>
+        <th>Componente Z</th>
+        <th>Puntaje</th>
+        <th>Días mora trimestre 1</th>
+        <th>Días mora trimestre 2</th>
+        <th>Días mora trimestre 3</th>
+        <th>Puntaje Trimestre 1</th>
+        <th>Puntaje Trimestre 2</th>
+        <th>Puntaje Trimestre 3</th>
+        <th>Puntaje Tot. Cortes Trimestrales</th>
+        <th>Cantidad Trimestres</th>
+        <th>Valor descuento Amortizado</th>
+        <th>Valor descuento</th>
+        <th>Valor de Saldo Capital Cartera menos Desc.</th>
+        <th>Mora Max Últimos Tres Años</th>
+        <th>Diasmorames1</th>
+        <th>Diasmorames2</th>
+        <th>Diasmorames3</th>
+        <th>Diasmorames4</th>
+        <th>Diasmorames5</th>
+        <th>Diasmorames6</th>
+        <th>Diasmorames7</th>
+        <th>Diasmorames8</th>
+        <th>Diasmorames9</th>
+        <th>Diasmorames10</th>
+        <th>Diasmorames11</th>
+        <th>Diasmorames12</th>
+        <th>Diasmorames13</th>
+        <th>Diasmorames14</th>
+        <th>Diasmorames15</th>
+        <th>Diasmorames16</th>
+        <th>Diasmorames17</th>
+        <th>Diasmorames18</th>
+        <th>Diasmorames19</th>
+        <th>Diasmorames20</th>
+        <th>Diasmorames21</th>
+        <th>Diasmorames22</th>
+        <th>Diasmorames23</th>
+        <th>Diasmorames24</th>
+        <th>Diasmorames25</th>
+        <th>Diasmorames26</th>
+        <th>Diasmorames27</th>
+        <th>Diasmorames28</th>
+        <th>Diasmorames29</th>
+        <th>Diasmorames30</th>
+        <th>Diasmorames31</th>
+        <th>Diasmorames32</th>
+        <th>Diasmorames33</th>
+        <th>Diasmorames34</th>
+        <th>Diasmorames35</th>
+        <th>Diasmorames36</th>
+        <th>Diasmorames37</th>
+        <th>Diasmorames38</th>
+        <th>Diasmorames39</th>
+        <th>Diasmorames40</th>
+        <th>Diasmorames41</th>
+        <th>Diasmorames42</th>
+        <th>Diasmorames43</th>
+        <th>Diasmorames44</th>
+        <th>Diasmorames45</th>
+        <th>Diasmorames46</th>
+        <th>Diasmorames47</th>
+        <th>Diasmorames48</th>
+        <th>Diasmorames49</th>
+        <th>Diasmorames50</th>
+        <th>Diasmorames51</th>
+        <th>Diasmorames52</th>
+        <th>Diasmorames53</th>
+        <th>Diasmorames54</th>
+        <th>Diasmorames55</th>
+        <th>Diasmorames56</th>
+        <th>Diasmorames57</th>
+        <th>Diasmorames58</th>
+        <th>Diasmorames59</th>
+        <th>Diasmorames60</th>
+        <th>Diasmorames61</th>
+        <th>Diasmorames62</th>
+        <th>Diasmorames63</th>
+        <th>Diasmorames64</th>
+        <th>Diasmorames65</th>
+        <th>Diasmorames66</th>
+        <th>Diasmorames67</th>
+        <th>Diasmorames68</th>
+        <th>Diasmorames69</th>
+        <th>Diasmorames70</th>
+      </tr>
+      </thead>
+      <tbody class="min-width">
+      <tr *ngFor="let item of provisiones; let i = index; trackBy: trackByIndex">
+        <td>{{item.contrato}}</td>
+        <td>{{item.cliente.identificacion.tipo}}</td>
+        <td>{{item.cliente.identificacion.numero}}</td>
+        <td class="min-width-400">{{item.cliente.razonSocial}}</td>
+        <td>{{item.origen}}</td>
+        <td>{{item.banpri}}</td>
+        <td>{{item.peusumod}}</td>
+        <td>{{item.pehstamp}}</td>
+        <td>{{item.proceso.periodo}}</td>
+        <td>{{item.proceso.corte}}</td>
+        <td>{{item.situacion}}</td>
+        <td>{{item.aplicativo}}</td>
+        <td>{{item.producto}}</td>
+        <td>{{item.subpro}}</td>
+        <td>{{item.modalidad}}</td>
+        <td>{{item.segmento !== undefined ? item.segmento.id : ''}}</td>
+        <td>{{item.segmento !== undefined ? item.segmento.descripcion: ''}}</td>
+        <td>{{item.cliente.tipo}}</td>
+        <td>{{item.cliente.tipoEmpresa !== undefined ? item.cliente.tipoEmpresa.descripcion : ''}}</td>
+        <td>{{item.cliente.ciiu !== undefined ? item.cliente.ciiu.id : ''}}</td>
+        <td>{{item.cliente.ciiu !== undefined ? item.cliente.ciiu.descripcion : ''}}</td>
+        <td>{{item.cliente.fechaActivos | date : "dd/MM/yyyy"}}</td>
+        <td>{{item.cliente.activos | number}}</td>
+        <td>{{item.tea}}</td>
+        <td>{{item.suspint}}</td>
+        <td>{{item.fecsusp | date : "dd/MM/yyyy"}}</td>
+        <td>{{item.restruct !== undefined && item.restruct == 1 ? 'R' : ''}}</td>
+        <td>{{item.alerrest !== undefined && item.alerrest == 1 ? 'ALERTA RECLASIFICAR' : ''}}</td>
+        <td>{{item.divisa}}</td>
+        <td>{{item.numgar}}</td>
+        <td>{{item.fecagar | date : "dd/MM/yyyy"}}</td>
+        <td class="min-width-400">{{item.descgreg}}</td>
+        <td>{{item.descghis}}</td>
+        <td>{{item.descgmod}}</td>
+        <td>{{item.gi}}</td>
+        <td>{{item.valgar | number}}</td>
+        <td>{{item.garltv}}%</td>
+        <td>{{item.x100cobgar}}%</td>
+        <td>{{item.tipogar}}</td>
+        <td>{{item.clasegar}}</td>
+        <td>{{item.fecaval | date : "dd/MM/yyyy"}}</td>
+        <td>{{item.tipologiar !== undefined ? item.tipologiar.id : ''}}</td>
+        <td>{{item.tipologiar !== undefined ? item.tipologiar.descripcion : ''}}</td>
+        <td>{{item.fecini | date : "dd/MM/yyyy"}}</td>
+        <td>{{item.fecfin | date : "dd/MM/yyyy"}}</td>
+        <td>{{item.diasmora}}</td>
+        <td>{{item.dmordinc}}</td>
+        <td>{{item.fecincum | date : "dd/MM/yyyy"}}</td>
+        <td>{{item.salcapml | number}}</td>
+        <td>{{item.salintml | number}}</td>
+        <td>{{item.salotrml | number}}</td>
+        <td>{{item.salcapme | number}}</td>
+        <td>{{item.salintme | number}}</td>
+        <td>{{item.salotrme | number}}</td>
+        <td>{{item.totsalcap | number}}</td>
+        <td>{{item.totsalint | number}}</td>
+        <td>{{item.totsalotr | number}}</td>
+        <td>{{item.expocar | number}}</td>
+        <td>{{item.pimatA}}%</td>
+        <td>{{item.pimatB}}%</td>
+        <td>{{item.pdi}}%</td>
+        <td>{{item.pdidesc}}%</td>
+        <td>{{item.cipcap | number}}</td>
+        <td>{{item.cipint | number}}</td>
+        <td>{{item.cipotr | number}}</td>
+        <td>{{item.cipcapd | number}}</td>
+        <td>{{item.cipintd | number}}</td>
+        <td>{{item.cipotrd | number}}</td>
+        <td>{{item.totcipcap | number}}</td>
+        <td>{{item.totcipint | number}}</td>
+        <td>{{item.totcipotr | number}}</td>
+        <td>{{item.pematbcap | number}}</td>
+        <td>{{item.pematbint | number}}</td>
+        <td>{{item.pematbotr | number}}</td>
+        <td>{{item.pematbcapd | number}}</td>
+        <td>{{item.pematbintd | number}}</td>
+        <td>{{item.pematbotrd | number}}</td>
+        <td>{{item.difmatcap | number}}</td>
+        <td>{{item.difmatint | number}}</td>
+        <td>{{item.difmatort | number}}</td>
+        <td>{{item.ratciccap | number}}</td>
+        <td>{{item.ratcicint | number}}</td>
+        <td>{{item.ratcicotr | number}}</td>
+        <td>{{item.comciccap | number}}</td>
+        <td>{{item.comcicint | number}}</td>
+        <td>{{item.comcicotr | number}}</td>
+        <td>{{item.totciccap | number}}</td>
+        <td>{{item.totcicint | number}}</td>
+        <td>{{item.totcicotr | number}}</td>
+        <td>{{item.provacicap | number}}</td>
+        <td>{{item.provacicint | number}}</td>
+        <td>{{item.provacicotr | number}}</td>
+        <td>{{item.facajupla}}</td>
+        <td>{{item.totprovcap | number}}</td>
+        <td>{{item.totprovint | number}}</td>
+        <td>{{item.totprovotr | number}}</td>
+        <td>{{item.totprov | number}}</td>
+        <td>{{item.x100provcap}}%</td>
+        <td>{{item.x100provint}}%</td>
+        <td>{{item.x100provotr}}%</td>
+        <td>{{item.x100provtot}}%</td>
+        <td>{{item.catcuan}}</td>
+        <td>{{item.catindv}}</td>
+        <td>{{item.catsub}}</td>
+        <td>{{item.catali}}</td>
+        <td>{{item.calcar}}</td>
+        <td>{{item.t}}</td>
+        <td>{{item.expcarcap | number}}</td>
+        <td>{{item.expcaront | number}}</td>
+        <td>{{item.expcarotr | number}}</td>
+        <td>{{item.expcartot | number}}</td>
+        <td>{{item.ciccapma | number}}</td>
+        <td>{{item.cicintma | number}}</td>
+        <td>{{item.cicotrma | number}}</td>
+        <td>{{item.cictotma | number}}</td>
+        <td>{{item.amb}}</td>
+        <td>{{item.amc}}</td>
+        <td>{{item.mmb}}</td>
+        <td>{{item.mmc}}</td>
+        <td>{{item.mmd}}</td>
+        <td>{{item.crb}}</td>
+        <td>{{item.car}}</td>
+        <td>{{item.cam}}</td>
+        <td>{{item.pr}}</td>
+        <td>{{item.gp}}</td>
+        <td>{{item.gh}}</td>
+        <td>{{item.z}}</td>
+        <td>{{item.puntaje}}</td>
+        <td>{{item.mtrim1}}</td>
+        <td>{{item.mtrim2}}</td>
+        <td>{{item.mtrim3}}</td>
+        <td>{{item.punq1}}</td>
+        <td>{{item.punq2}}</td>
+        <td>{{item.punq3}}</td>
+        <td>{{item.puntot}}</td>
+        <td>{{item.cantq}}</td>
+        <td>{{item.valdesam}}</td>
+        <td>{{item.valdesc}}</td>
+        <td>{{item.salcapmdes}}</td>
+        <td>{{item.maxm36m}}</td>
+        <td>{{item.moras[0] !== undefined ? item.moras[0].diasmora : ''}}</td>
+        <td>{{item.moras[1] !== undefined ? item.moras[1].diasmora : ''}}</td>
+        <td>{{item.moras[2] !== undefined ? item.moras[2].diasmora : ''}}</td>
+        <td>{{item.moras[3] !== undefined ? item.moras[3].diasmora : ''}}</td>
+        <td>{{item.moras[4] !== undefined ? item.moras[4].diasmora : ''}}</td>
+        <td>{{item.moras[5] !== undefined ? item.moras[5].diasmora : ''}}</td>
+        <td>{{item.moras[6] !== undefined ? item.moras[6].diasmora : ''}}</td>
+        <td>{{item.moras[7] !== undefined ? item.moras[7].diasmora : ''}}</td>
+        <td>{{item.moras[8] !== undefined ? item.moras[8].diasmora : ''}}</td>
+        <td>{{item.moras[9] !== undefined ? item.moras[9].diasmora : ''}}</td>
+        <td>{{item.moras[10] !== undefined ? item.moras[10].diasmora : ''}}</td>
+        <td>{{item.moras[11] !== undefined ? item.moras[11].diasmora : ''}}</td>
+        <td>{{item.moras[12] !== undefined ? item.moras[12].diasmora : ''}}</td>
+        <td>{{item.moras[13] !== undefined ? item.moras[13].diasmora : ''}}</td>
+        <td>{{item.moras[14] !== undefined ? item.moras[14].diasmora : ''}}</td>
+        <td>{{item.moras[15] !== undefined ? item.moras[15].diasmora : ''}}</td>
+        <td>{{item.moras[16] !== undefined ? item.moras[16].diasmora : ''}}</td>
+        <td>{{item.moras[17] !== undefined ? item.moras[17].diasmora : ''}}</td>
+        <td>{{item.moras[18] !== undefined ? item.moras[18].diasmora : ''}}</td>
+        <td>{{item.moras[19] !== undefined ? item.moras[19].diasmora : ''}}</td>
+        <td>{{item.moras[20] !== undefined ? item.moras[20].diasmora : ''}}</td>
+        <td>{{item.moras[21] !== undefined ? item.moras[21].diasmora : ''}}</td>
+        <td>{{item.moras[22] !== undefined ? item.moras[22].diasmora : ''}}</td>
+        <td>{{item.moras[23] !== undefined ? item.moras[23].diasmora : ''}}</td>
+        <td>{{item.moras[24] !== undefined ? item.moras[24].diasmora : ''}}</td>
+        <td>{{item.moras[25] !== undefined ? item.moras[25].diasmora : ''}}</td>
+        <td>{{item.moras[26] !== undefined ? item.moras[26].diasmora : ''}}</td>
+        <td>{{item.moras[27] !== undefined ? item.moras[27].diasmora : ''}}</td>
+        <td>{{item.moras[28] !== undefined ? item.moras[28].diasmora : ''}}</td>
+        <td>{{item.moras[29] !== undefined ? item.moras[29].diasmora : ''}}</td>
+        <td>{{item.moras[30] !== undefined ? item.moras[30].diasmora : ''}}</td>
+        <td>{{item.moras[31] !== undefined ? item.moras[31].diasmora : ''}}</td>
+        <td>{{item.moras[32] !== undefined ? item.moras[32].diasmora : ''}}</td>
+        <td>{{item.moras[33] !== undefined ? item.moras[33].diasmora : ''}}</td>
+        <td>{{item.moras[34] !== undefined ? item.moras[34].diasmora : ''}}</td>
+        <td>{{item.moras[35] !== undefined ? item.moras[35].diasmora : ''}}</td>
+        <td>{{item.moras[36] !== undefined ? item.moras[36].diasmora : ''}}</td>
+        <td>{{item.moras[37] !== undefined ? item.moras[37].diasmora : ''}}</td>
+        <td>{{item.moras[38] !== undefined ? item.moras[38].diasmora : ''}}</td>
+        <td>{{item.moras[39] !== undefined ? item.moras[39].diasmora : ''}}</td>
+        <td>{{item.moras[40] !== undefined ? item.moras[40].diasmora : ''}}</td>
+        <td>{{item.moras[41] !== undefined ? item.moras[41].diasmora : ''}}</td>
+        <td>{{item.moras[42] !== undefined ? item.moras[42].diasmora : ''}}</td>
+        <td>{{item.moras[43] !== undefined ? item.moras[43].diasmora : ''}}</td>
+        <td>{{item.moras[44] !== undefined ? item.moras[44].diasmora : ''}}</td>
+        <td>{{item.moras[45] !== undefined ? item.moras[45].diasmora : ''}}</td>
+        <td>{{item.moras[46] !== undefined ? item.moras[46].diasmora : ''}}</td>
+        <td>{{item.moras[47] !== undefined ? item.moras[47].diasmora : ''}}</td>
+        <td>{{item.moras[48] !== undefined ? item.moras[48].diasmora : ''}}</td>
+        <td>{{item.moras[49] !== undefined ? item.moras[49].diasmora : ''}}</td>
+        <td>{{item.moras[50] !== undefined ? item.moras[50].diasmora : ''}}</td>
+        <td>{{item.moras[51] !== undefined ? item.moras[51].diasmora : ''}}</td>
+        <td>{{item.moras[52] !== undefined ? item.moras[52].diasmora : ''}}</td>
+        <td>{{item.moras[53] !== undefined ? item.moras[53].diasmora : ''}}</td>
+        <td>{{item.moras[54] !== undefined ? item.moras[54].diasmora : ''}}</td>
+        <td>{{item.moras[55] !== undefined ? item.moras[55].diasmora : ''}}</td>
+        <td>{{item.moras[56] !== undefined ? item.moras[56].diasmora : ''}}</td>
+        <td>{{item.moras[57] !== undefined ? item.moras[57].diasmora : ''}}</td>
+        <td>{{item.moras[58] !== undefined ? item.moras[58].diasmora : ''}}</td>
+        <td>{{item.moras[59] !== undefined ? item.moras[59].diasmora : ''}}</td>
+        <td>{{item.moras[60] !== undefined ? item.moras[60].diasmora : ''}}</td>
+        <td>{{item.moras[61] !== undefined ? item.moras[61].diasmora : ''}}</td>
+        <td>{{item.moras[62] !== undefined ? item.moras[62].diasmora : ''}}</td>
+        <td>{{item.moras[63] !== undefined ? item.moras[63].diasmora : ''}}</td>
+        <td>{{item.moras[64] !== undefined ? item.moras[64].diasmora : ''}}</td>
+        <td>{{item.moras[65] !== undefined ? item.moras[65].diasmora : ''}}</td>
+        <td>{{item.moras[66] !== undefined ? item.moras[66].diasmora : ''}}</td>
+        <td>{{item.moras[67] !== undefined ? item.moras[67].diasmora : ''}}</td>
+        <td>{{item.moras[68] !== undefined ? item.moras[68].diasmora : ''}}</td>
+        <td>{{item.moras[69] !== undefined ? item.moras[69].diasmora : ''}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="spacer"></div>
+  <section>
+    <pagination class="justify-content-center" [totalItems]="totalRegistros" [(ngModel)]="paginaActual"
+                [itemsPerPage]="cantidadRegistros" (pageChanged)="cambioPagina($event)" [maxSize]="5"
+                [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;"
+                lastText="&raquo;">>
+    </pagination>
+  </section>
+  <div class="spacer"></div>
+  <section>
+    <div class="text-right">
+      <a href="{{urlDescarga}}" target="_blank" class="btn btn-primary" [class.disabled]="!buscado">Descargar</a>
+      <button type="button" class="btn btn-secondary" disabled="{{buscado?'':'disabled'}}" (click)="resetForm()">
+        Reiniciar
+      </button>
+    </div>
+  </section>
+</div>

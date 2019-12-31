@@ -1,0 +1,59 @@
+<nav class="navLocation" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Parametría</li>
+    <li class="breadcrumb-item active" aria-current="page">Gestión usuarios</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <header>
+    Administrador de usuarios
+  </header>
+  <div class="spacer"></div>
+  <section>
+    <table class="table tabla-santander">
+      <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+      </colgroup>
+      <thead>
+      <tr>
+        <th>Tipo de documento</th>
+        <th>No. de documento</th>
+        <th>Nombres y apellidos</th>
+        <th>Usuario banco</th>
+        <th colspan="2">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of usuarios; let i = index; trackBy: trackByIndex">
+        <td>{{item.tipodoc}}</td>
+        <td>{{item.numdoc}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.id}}</td>
+        <td><a [routerLink]="['/guardarUsuario',item.id]" class="other" data-toggle="tooltip"
+               data-placement="top" title="Editar"><span class="oi oi-pencil"></span></a></td>
+        <td><a class="other2" (click)="eliminar(item.id)" data-toggle="tooltip" data-placement="top"
+               title="Eliminar"><span class="oi oi-trash"></span></a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="spacer"></div>
+  <section>
+    <pagination class="justify-content-center" [totalItems]="totalRegistros" [(ngModel)]="paginaActual"
+                [itemsPerPage]="cantidadRegistros" (pageChanged)="cambioPagina($event)" [maxSize]="5"
+                [boundaryLinks]="true" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;"
+                lastText="&raquo;">>
+    </pagination>
+  </section>
+  <div class="spacer"></div>
+  <section>
+    <div class="text-right">
+      <button class="btn btn-primary" [routerLink]="['/guardarUsuario']">Crear</button>
+    </div>
+  </section>
+</div>

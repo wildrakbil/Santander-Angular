@@ -1,0 +1,49 @@
+<nav class="navLocation" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Consultas y reportes</li>
+    <li class="breadcrumb-item active" aria-current="page">Reportes</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <header>
+    Filtros de busqueda
+  </header>
+  <div class="spacer"></div>
+  <section>
+    <form [formGroup]="searchForm" (ngSubmit)="buscar()">
+      <div class="row">
+        <div class="col">
+          <label for="periodo">Fecha</label>
+        </div>
+        <div class="col">
+          <select formControlName="periodo" id="periodo" class="form-control">
+            <option *ngFor="let item of periodos" [value]="item.periodo">
+              {{item.descripcion}}
+            </option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="modalidad">Reportes</label>
+        </div>
+        <div class="col">
+          <select formControlName="modalidad" id="modalidad" class="form-control">
+            <option value="1">Cartera consumo vencida</option>
+            <option value="2">Clientes con códigos ciiu</option>
+            <option value="3">Clientes ingresos y egresos</option>
+            <option value="4">Clientes venezolanos</option>
+            <option value="5">Consulta pagos obligaciones</option>
+          </select>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <button type="submit" class="btn btn-primary btn-block"
+                      disabled="{{buscado?'disabled':''}}">Consultar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</div>

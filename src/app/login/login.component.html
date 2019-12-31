@@ -1,0 +1,42 @@
+<div class="logincontainer">
+    <div class="logincontainerimg">
+        <div class="loginlogo"></div>
+        <div class="line3"></div>
+        <div class="textbienv">
+            Bienvenido <br>a Provisiones
+        </div>
+        <div class="imglogin"></div>
+    </div>
+    <div class="logindatos">
+        <form class="formulariologin">
+            <span class="formtitle">
+                Ingresa tus datos
+            </span>
+
+            <div class="wrap-input100 validate-input">
+                <span class="label-input100">Usuario</span>
+                <input class="input100" type="text" name="usuario" id="usuario" placeholder="Digita aqui tu usuario"
+                       [(ngModel)]="usuario" (click)="limpiarMnsErrors()">
+                <span class="focus-input100"></span>
+            </div>
+            <div class="mnsInfo" *ngIf="errorUsu">
+                {{mnsErrorLoginUsu}}
+            </div>
+            <div class="wrap-input100 validate-input">
+                <span class="label-input100">Contraseña</span>
+                <input class="input100" type="password" name="Password" placeholder="Digita aqui tu contraseña"
+                       [(ngModel)]="password" (click)="limpiarMnsErrors()">
+                <span class="focus-input100"></span>
+            </div>
+            <div class="mnsInfo" *ngIf="errorPass">
+                {{mnsErrorLoginPass}}
+            </div>
+            <div class="container-contact100-form-btn">
+                <div class="wrap-contact100-form-btn">
+                    <div class="botones">
+                        <button (click)="login()" class="btn btn-primary">Ingresar</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+table {
+  border-collapse: collapse;
+  overflow-x: scroll;
+  display: block;
+}
+
+thead, tbody {
+  display: block;
+}
+
+tbody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 400px;
+}
+
+td, th {
+  overflow: hidden;
+}

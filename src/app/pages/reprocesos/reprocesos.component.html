@@ -1,0 +1,32 @@
+<nav class="navLocation" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Reprocesos</li>
+    <li class="breadcrumb-item active" aria-current="page">Ejecutar</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <input type="checkbox" [(ngModel)]="inicial" style="top:10px; position: relative;" >
+          <span class="texto-santander"
+                style="top:10px; position: relative;">&nbsp;<strong>Carga inicial</strong></span>
+        </div>
+        <div class="col">
+            <div class="row" id="rowRedTop">
+              <div class="col">
+                <label>Fecha</label>
+              </div>
+              <input [(ngModel)]="periodo" type="date">
+            </div>
+        </div>
+        <div class="col-2">
+          <div class="text-right">
+            <button class="btn btn-primary" (click)="ejecutar()">Ejecutar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

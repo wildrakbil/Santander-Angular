@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+.breadcrumb {
+	background-color: white;
+}
+
+.progress-bar {
+	background-color: #D00A1A;
+}
+
+.texto-santander{
+	color: #D00A1A;
+}
+
+td input[type=checkbox]{
+	height: auto;
+}
+
+.tabla-santander thead, .tabla-santander tfoot{
+	color: white;
+	background-color: #D00A1A;
+}
+
+.tabla-santander thead th {
+	border: 1px solid white;
+}
+
+.tabla-santander thead tr.header-main {
+	color: #D00A1A;
+	background-color: white;
+}
+
+.tabla-santander thead tr.header-main th{
+	border: 1px solid gainsboro;
+}
+
+.tabla-santander tbody td {
+	border-left: 1px solid gainsboro;
+	border-right: 1px solid gainsboro;
+	border-top: none;
+	border-bottom: none;
+}
+
+.tabla-santander tbody:last-child {
+	border-bottom: 1px solid gainsboro;
+}
+
+.tabla-santander thead.min-width th, .tabla-santander tbody.min-width td {
+	min-width: 200px;
+}
+
+.tabla-santander th.min-width-400, .tabla-santander td.min-width-400 {
+	min-width: 400px !important;
+}
+
+.tabla-santander thead.center tr {
+	text-align: center;
+}
+
+.tabla-santander thead.center tr th {
+	vertical-align: middle;
+}
+
+.tabla-santander tbody.center tr {
+	text-align: center;
+}
+
+.tabla-santander tbody.center tr th {
+	vertical-align: middle;
+}
+
+.tabla-santander tfoot.center tr {
+	text-align: center;
+}
+
+.tabla-santander tfoot.center tr th {
+	vertical-align: middle;
+}
+
+.tabla-santander tbody.border-black tr {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.tabla-santander tbody.border-black tr td:first-child {
+	width: 450px;
+}
+
+.tabla-santander tbody.last-child-border-dashed tr:last-child  {
+	border-top: 1px dashed gray;
+}
+
+col:nth-child(2n+1) {
+	background:	RGB(245, 245, 245);
+}
+
+.btn-primary {
+	background-color: #D00A1A;
+	border-color: #D00A1A;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.btn-primary:hover {
+	background-color: #D00A1A;
+	border-color: #D00A1A;
+}
+
+ul.pagination li.active .page-link{
+	background-color: #D00A1A !important;
+	color: white !important;
+	border-color: #D00A1A !important;
+}
+
+.page-link {
+	color: #D00A1A;
+}
+
+header {
+	padding: 5px;
+	background-color: #D00A1A;
+	color: white;
+	font-weight: bold;
+}
+
+.spacer{
+	height: 15px;
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type=number].no-spinner::-webkit-inner-spin-button, 
+input[type=number].no-spinner::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+section.scroll-x {
+	overflow-x: scroll;
+	height: 400px;
+}

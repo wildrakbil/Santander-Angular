@@ -1,0 +1,236 @@
+.mnsInfo {
+    color: #D0021B;
+}
+
+header {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contlogo {
+    line-height: 72px;
+    width: 100%;
+}
+.logo {
+    width: 177px;
+    height: 35px;
+    background-image: url("/assets/img/logo-banco-santander-pos.png");
+    margin: auto;
+}
+.line { 
+    box-sizing: border-box; 
+    height: 1px;    
+    width: 100%;    
+    border: 2px 
+    solid #D0021B;
+}
+.line2 {    
+    box-sizing: border-box; 
+    height: 1px;    
+    width: 100%;    
+    border: 0.1px 
+    solid #bababa;
+}
+.line3 {    
+    box-sizing: border-box; 
+    height: 1px;    
+    width: 100%;    
+    border: 0.1px 
+    solid rgb(255, 255, 255);
+    opacity: 0.2;
+}
+section {
+    min-height: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 72px;
+    background-color: #EC0000;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.contfooter {
+    line-height: 72px;
+    width: 100%;
+}
+.logofooter {
+    width: 172px;
+    height: 30px;
+    background-image: url("/assets/img/logo-banco-santander-neg.png");
+    margin-left: 2%;
+    float: left;
+}
+.textfooter {
+    width: 410px;
+    height: 40px;
+    text-align: right;
+    font-size: 11px;
+    float: right;
+    color: #ffff;
+    padding-right: 35px;
+    line-height: normal;
+}
+.tituloaplic {
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+}
+.migadepan {
+    font-size: 16px;
+    padding: 15px 15px 15px 120px;
+    font-weight: initial;
+}
+#subtytextizq{
+    width: 294px;
+    float: left;
+    margin-left: 120px;
+    padding-right: 15px;
+}
+.subtitulo {
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+
+}
+.textdetalle {
+    padding: 20px 0 20px 0;
+}
+.contenido-princi {
+    float: right;
+    padding-bottom: 60px;
+    padding-right: 30px;
+
+}
+.botones {
+    text-align: center;
+        padding-top: 30px;
+}
+button {
+    background: #ec0000;
+    border: 1px solid #fff;
+    color: #fff;
+    width: auto!important;
+    font-size: 14px;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color .4s,color .4s,border .4s;
+    border-radius: 40px;
+    text-decoration: none!important;
+}
+
+
+.logincontainer {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    background: #ec0000;
+}
+.logincontainerimg {
+    width: 70%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+
+}
+.imglogin {
+    background-image: url("/assets/img/stock-photo-business.jpg");
+    opacity: 0.1;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -2;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.logindatos {
+    width: 640px;
+    min-height: 100vh;
+    background: #fff;
+    border-radius: 2px;
+    padding: 200px 55px 33px 55px;
+    position: relative;
+}
+.formulariologin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 68px;
+}
+.formtitle {
+    display: block;
+    width: 100%;
+    font-size: 39px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 64px;
+}
+.validate-input {
+    position: relative;
+}
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #dbdbdb;
+    margin-bottom: 5px;
+}
+.label-input100 {
+    font-size: 18px;
+    color: #999999;
+    line-height: 1.2;
+    padding-left: 2px;
+}
+input.input100 {
+    height: 50px;
+}
+.input100 {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-size: 22px;
+    color: #555555;
+    line-height: 1.2;
+    padding: 0 2px;
+    border: 0;
+}
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.loginlogo {
+    width: 172px;
+    height: 30px;
+    background-image: url("/assets/img/logo-banco-santander-neg.png"); 
+    background-repeat: no-repeat;
+    margin: 30px 0 30px 30px;
+}
+.textbienv {
+    display: block;
+    width: 100%;
+    font-size: 60px;
+    color:rgb(255, 255, 255);
+    padding: 20% 0 50px 30px;
+    line-height: 1.2;
+
+}
+.enlaceconoc a {
+    color: rgb(255, 255, 255)!important;
+    font-size: 25px;
+    padding: 0 0 10px 30px;
+}

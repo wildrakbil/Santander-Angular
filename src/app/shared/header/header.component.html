@@ -1,0 +1,78 @@
+<!-- Primer panel -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+	<h3><a (click)="cerrarMenu()"><span class="oi oi-x"></span></a>Menu</h3>
+	<a id="reprocesos" [routerLink]="['/reprocesos']" (click)="cerrarMenu()" >
+		<div>
+			<div class="red-block">&nbsp;</div>Reprocesos <span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+	<a id="consultaReportes" (click)="menu('consultaReportes','cbp-spmenu-s4','1')">
+		<div>
+			<div class="red-block">&nbsp;</div>Consultas y reportes <span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+	<a id="parameteria" (click)="menu('parameteria','cbp-spmenu-s6','1')">
+		<div>
+			<div class="red-block">&nbsp;</div>Parametría <span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+	<a id="cerrar" (click)="cerrarSesion()">
+		<div>
+			<div class="red-block">&nbsp;</div>Cerrar sesión <span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+</nav>
+<!-- Opciones Reproceso > Actualizar -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s3">
+	<h3>&nbsp;</h3>
+	<a [routerLink]="['/activos']" (click)="cerrarMenu()">Actualizar activos</a>
+	<a [routerLink]="['/catSubjetivas']" (click)="cerrarMenu()">Categorias subjetivas</a>
+</nav>
+<!-- Opciones Consultas y reportes -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s4">
+	<h3>&nbsp;</h3>
+	<a [routerLink]="['/consultar']" (click)="cerrarMenu()">Consultar</a>
+	<a id="reportes" [routerLink]="['/reportes']" (click)="cerrarMenu()">
+		<div>
+			<div class="red-block">&nbsp;</div>Reportes<span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+</nav>
+<!-- menu parameteria -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s6">
+	<h3>&nbsp;</h3>
+	<a [routerLink]="['/log']" (click)="cerrarMenu()">Log Ejecuciones  <span class="oi oi-chevron-right" style="float: right"></span></a>
+	<a [routerLink]="['/usuarios']" (click)="cerrarMenu()">Gestión usuarios  <span class="oi oi-chevron-right" style="float: right"></span></a>
+</nav>
+
+<!-- Validadores INI -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s8">
+	<h3>&nbsp;</h3>
+	<a  [routerLink]="['/validadorComercial']"  (click)="cerrarMenu()">
+		<div>
+			Comercial <span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+	<a [routerLink]="['/validadorConsumo']" (click)="cerrarMenu()">
+		<div>
+			Consumo <span class="oi oi-chevron-right" style="float: right"></span>
+		</div>
+	</a>
+</nav>
+<!-- Validadores FIN -->
+
+<!-- Boton del menu -->
+<nav class="navbar navbar-light">
+	<button class="navbar-toggler" type="button" (click)="menuPrincipal('cbp-spmenu-s1')">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" >Menu <span class="sr-only">(current)</span></a>
+      </li>
+  	</ul>
+  	<img style="margin-right: auto;" src="/assets/img/santanderRojo.png" />
+</nav>
+<div class="bottomBorder"></div>
+<div class="spacer"></div>
